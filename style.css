@@ -1,0 +1,1331 @@
+/* ========== ESTILOS GENERALES DEL BODY ========== */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+  background: url("https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
+              no-repeat center center fixed; /* Fondo estilo espacial */
+  background-size: cover;
+  color: white;
+}
+
+/* ========== CONTENEDOR PRINCIPAL (pantalla) ========== */
+.pantalla {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(3px); /* Efecto de desenfoque */
+  background-color: rgba(0, 0, 0, 0.4); /* Capa oscura semitransparente */
+}
+
+/* ========== HEADER (TÍTULO SUPERIOR) ========== */
+header h1, header h2 {
+  margin: 0;
+  padding: 0.2rem;
+  text-shadow: 0 0 10px rgba(255,255,255,0.6); /* Brillo suave en el texto */
+}
+
+/* ========== GRID DE ÍCONOS (contenedor) ========== */
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+/* ========== CADA ÍCONO INDIVIDUAL ========== */
+.icono {
+  width: 150px;
+  background-color: rgba(0,0,0,0.5); /* Fondo oscuro con transparencia */
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3); /* Sombra estilo neón */
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Imagen dentro del ícono */
+.icono img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid white; /* Borde blanco fino alrededor de la imagen */
+}
+
+/* Texto debajo del ícono */
+.icono p {
+  font-size: 0.85rem;
+  color: #cceeff;
+  text-shadow: 0 0 2px #00ffff; /* Texto con brillo suave */
+  margin: 0;
+}
+
+/* Efecto al pasar el mouse sobre el ícono */
+.icono:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffff; /* Brillo más fuerte */
+}
+
+/* ========== PIE DE PÁGINA (hora/menú) ========== */
+footer {
+  text-align: right;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* ========== VENTANA EMERGENTE (popup) ========== */
+.ventana {
+  display: none; /* Oculta por defecto */
+  position: fixed;
+  top: 10%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  background: rgba(0,0,0,0.95); /* Fondo casi negro */
+  border: 2px solid #00f0ff;
+  z-index: 999;
+  box-shadow: 0 0 20px #00f0ff; /* Brillo azul alrededor */
+}
+
+/* Contenido dentro de la ventana emergente */
+.ventana-contenido {
+  padding: 1rem;
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  color: #fff;
+}
+
+/* Botón de cierre (X) de la ventana emergente */
+.ventana-contenido button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #222;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ========== VENTANA: CódiceLatente.txt ========== */
+.ventana-codice {
+  background: linear-gradient(to bottom, #000000, #111111);
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+.codice-terminal {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  font-family: monospace;
+  color: #00ffcc;
+  border: 1px solid #00ffcc;
+  margin-top: 1rem;
+}
+
+.codice-glitch {
+  font-size: 1.2rem;
+  color: #f0f;
+  animation: glitch-blink 0.3s infinite alternate;
+}
+
+@keyframes glitch-blink {
+  0% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+/* ========== VENTANA: Reactor-Fz0.exe ========== */
+.ventana-reactor {
+  background-color: #0a0a0a;
+  border: 2px solid #ff6600;
+  box-shadow: 0 0 25px #ff3300;
+}
+
+.reactor-status {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* ========== VENTANA: EclipseFinal.dll ========== */
+/*.ventana-eclipse {
+  background: radial-gradient(circle, #300000, #000000);
+  border: 2px solid red;
+  box-shadow: 0 0 20px red;
+}*/
+
+/* ========== VENTANA: metadatos_null.bkp ========== */
+.ventana-metadatos {
+  background: linear-gradient(to right, #001a1a, #000000);
+  border: 2px solid #009999;
+  box-shadow: 0 0 15px #00cccc;
+}
+
+/* ========== VENTANA: herencia_oscura.sys ========== */
+.ventana-herencia {
+  background: url('https://www.transparenttextures.com/patterns/asfalt-light.png') repeat, #0d0d0d;
+  border: 2px solid #9900ff;
+  box-shadow: 0 0 20px #9900ff;
+  color: #ddddff;
+}
+
+/* ========== VENTANA: Buscallamas ========== */
+.ventana-buscallamas {
+  background: linear-gradient(135deg, #330000, #660000);
+  border: 2px solid #ff4444;
+  box-shadow: 0 0 15px #ff4444;
+}
+
+/* ========== VENTANA: Amphoreus ========== */
+.ventana-amphoreus {
+  background: linear-gradient(to bottom right, #002233, #000000);
+  border: 2px solid #66ccff;
+  box-shadow: 0 0 20px #66ccff;
+}
+
+/* ========== VENTANA: Mem.exe ========== */
+.ventana-mem {
+  background: linear-gradient(to bottom, #1a0033, #000011);
+  border: 2px solid #cc66ff;
+  box-shadow: 0 0 20px #cc66ff;
+}
+
+/* ========== VENTANA: Notas del administrador.wav ========== */
+.ventana-notas {
+  background: url('https://www.transparenttextures.com/patterns/noise.png') repeat, #111;
+  border: 2px solid #00ccff;
+  box-shadow: 0 0 20px #00ccff;
+}
+
+
+
+
+
+
+
+
+.ventana-ecomem {
+  background: linear-gradient(135deg, #1a0033, #000);
+  border: 2px solid #cc66ff;
+  box-shadow: 0 0 20px #cc66ff;
+  font-family: 'Courier New', monospace;
+}
+
+.mem-fragment {
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-left: 3px solid #cc66ff;
+  margin: 1rem 0;
+  animation: fadeInMem 1.5s ease-in-out;
+}
+
+@keyframes fadeInMem {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+.ventana-heraldico {
+  background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+  border: 2px solid #667eea;
+  box-shadow: 0 0 20px #667eea;
+  color: #cce5ff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.fragmento-panel {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #667eea;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.clan {
+  color: #ff3366;
+  font-weight: bold;
+  text-shadow: 0 0 4px red;
+}
+
+
+
+
+
+
+.ventana-flamea {
+  background: radial-gradient(circle, #330000, #000);
+  border: 2px solid #ff4444;
+  box-shadow: 0 0 20px #ff4444;
+  color: #ffdddd;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.flamea-secuencia {
+  background: rgba(255, 0, 0, 0.1);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-left: 4px solid #ff4444;
+  animation: llama-intro 1s ease-in-out;
+}
+
+.llama {
+  color: orange;
+  font-weight: bold;
+  animation: pulso 1s infinite alternate;
+}
+
+@keyframes llama-intro {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulso {
+  0% { text-shadow: 0 0 5px orange; }
+  100% { text-shadow: 0 0 15px yellow; }
+}
+
+
+
+
+
+
+
+
+.ventana-notas {
+  background: linear-gradient(to right, #000000, #1c1c1c);
+  border: 2px solid #00ccff;
+  box-shadow: 0 0 20px #00ccff;
+  font-family: 'Courier New', monospace;
+  color: #ccf2ff;
+}
+
+.nota-intro {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.onda-visual {
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
+  color: #00ffff;
+  animation: vibrarondas 1s infinite alternate;
+}
+
+@keyframes vibrarondas {
+  0% { letter-spacing: 0.5px; opacity: 0.8; }
+  100% { letter-spacing: 2px; opacity: 1; }
+}
+
+
+/* ====== TEXTO GLITCH (GENERAL) ====== */
+
+.glitch-text {
+  position: relative;
+  color: #00ffff;
+  animation: glitch 1.5s infinite;
+  text-shadow:
+    1px 1px #ff00c8,
+    -1px -1px #00ffea;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px #ff00c8, -2px -2px #00ffea; }
+  20% { text-shadow: -2px -2px #00ffea, 2px 2px #ff00c8; }
+  40% { text-shadow: 1px -1px #ff00c8, -1px 1px #00ffea; }
+  60% { text-shadow: -1px 1px #ff00c8, 1px -1px #00ffea; }
+  80% { text-shadow: 2px -2px #ff00c8, -2px 2px #00ffea; }
+  100% { text-shadow: -2px -2px #00ffea, 2px 2px #ff00c8; }
+}
+
+
+
+
+
+.ventana-reactor {
+  background-color: #0a0a0a;
+  border: 2px solid #ff6600;
+  box-shadow: 0 0 25px #ff3300;
+  color: #ffe0cc;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.reactor-panel {
+  margin-top: 1rem;
+  background: rgba(255, 102, 0, 0.05);
+  padding: 1rem;
+  border-left: 4px solid #ff6600;
+}
+
+.barra-energia {
+  width: 0%;
+  height: 10px;
+  background: #ffaa33;
+  margin-top: 1rem;
+  transition: width 1s ease;
+}
+
+.barra-energia.peligro {
+  background: red;
+  box-shadow: 0 0 15px red;
+}
+
+
+
+
+
+
+/*#clave-delta {
+  padding: 0.4rem;
+  background: #000;
+  border: 1px solid #00ffee;
+  color: #0ff;
+  font-family: 'Orbitron', monospace;
+  border-radius: 4px;
+  width: 250px;
+  outline: none;
+  box-shadow: 0 0 5px #00ffee66;
+  transition: 0.3s ease;
+}*/
+
+/*#clave-delta::placeholder {
+  color: #0ff;
+  opacity: 0.4;
+}
+
+.error-shake {
+  animation: shake 0.3s;
+  border-color: #f00 !important;
+  box-shadow: 0 0 8px #f00;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+  */
+
+
+
+
+
+
+
+
+/*.ventana-codice {
+  background: #0b0b0b;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+.codice-terminal {
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border: 1px solid #00ffcc;
+  margin-top: 1rem;
+  white-space: pre-line;
+}*/
+
+
+
+
+
+
+
+/*.ventana-eclipse {
+  background: #1a0000;
+  border: 2px solid #ff0000;
+  box-shadow: 0 0 20px red;
+  color: #ffcccc;
+  font-family: monospace;
+}
+
+.error-critico {
+  background: #330000;
+  padding: 1rem;
+  border-left: 4px solid red;
+  font-weight: bold;
+  color: #ff5555;
+  animation: glitch 0.3s infinite alternate;
+}
+
+@keyframes glitch {
+  0% { transform: translateX(0px); opacity: 1; }
+  100% { transform: translateX(-2px); opacity: 0.9; }
+}*/
+
+
+
+
+
+
+
+/*.ventana-herencia {
+  background: linear-gradient(to left, #000000, #110011);
+  border: 2px solid #aa00ff;
+  box-shadow: 0 0 20px #aa00ff;
+  color: #eeccff;
+  font-family: monospace;
+}
+
+.corrupcion {
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-left: 3px solid #aa00ff;
+  text-shadow: 0 0 4px #aa00ff;
+}*/
+
+
+/* === ESTILO TERMINAL herencia_oscura.sys === */
+.ventana.ventana-herencia {
+  border: 2px solid #a100ff;
+  box-shadow: 0 0 15px #a100ff;
+  background-color: rgba(10, 0, 20, 0.95);
+}
+
+.ventana-herencia .terminal-container {
+  background-color: #0a0014;
+  border: 1px solid #a100ff;
+  box-shadow: 0 0 8px #a100ff99;
+  padding: 1rem;
+}
+
+.ventana-herencia #terminal-output {
+  color: #d39eff;
+  background-color: #0a0014;
+  font-family: monospace;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  height: 180px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ventana-herencia #terminal-input {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+  border: 1px solid #a100ff;
+  background-color: #0a0014;
+  color: #d39eff;
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+.error-shake {
+  animation: shake 0.3s;
+  border-color: #f00 !important;
+  box-shadow: 0 0 8px #f00;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+#clave-metadatos {
+  padding: 0.4rem;
+  background: #000;
+  border: 1px solid #00ffee;
+  color: #0ff;
+  font-family: 'Orbitron', monospace;
+  border-radius: 4px;
+  width: 250px;
+  outline: none;
+  box-shadow: 0 0 5px #00ffee66;
+  transition: 0.3s ease;
+}
+
+#clave-metadatos::placeholder {
+  color: #0ff;
+  opacity: 0.4;
+}
+
+
+
+
+
+
+
+
+
+
+/* Efecto glitch para íconos */
+/*.glitch-icon img {
+  filter: contrast(1.5) brightness(0.7) saturate(2);
+  animation: glitch-flicker 2s infinite ease-in-out;
+}*/
+
+.glitch-icon p {
+  animation: glitch-text 12s infinite;
+  color: #f00;
+  text-shadow: 0 0 2px #f00, 0 0 5px #0ff;
+}
+
+/* Glitch visual de parpadeo suave */
+@keyframes glitch-flicker {
+  0%, 100% { opacity: 1; transform: translate(0, 0); }
+  10% { opacity: 0.8; transform: translate(-1px, 1px); }
+  20% { opacity: 0.6; transform: translate(1px, -1px); }
+  30% { opacity: 1; transform: translate(0.5px, -0.5px); }
+  40% { opacity: 0.9; transform: translate(-0.5px, 0.5px); }
+  50% { opacity: 0.4; transform: translate(0px, 0px); }
+  60%, 90% { opacity: 1; }
+}
+
+/* Glitch en el texto */
+@keyframes glitch-text {
+  0%, 100% { text-shadow: 0 0 2px #f00, 0 0 5px #0ff; }
+  25% { text-shadow: 2px 0 #0ff, -2px 0 #f00; }
+  50% { text-shadow: -1px 1px #f00, 1px -1px #0ff; }
+  75% { text-shadow: 1px 1px #0ff, -1px -1px #f00; }
+}
+
+
+
+
+
+/*.glitch-icon img {
+  clip-path: inset(10% 0 10% 0);
+}*/
+
+
+
+
+
+/*esto es de codice*/
+
+.archivo-lista {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.archivo-lista li {
+  padding: 0.4rem;
+  margin: 0.2rem 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.archivo-lista li:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+.subarchivo {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(255,255,255,0.03);
+  border: 1px dashed #00ffff;
+  font-size: 0.9rem;
+}
+
+
+
+
+/*icono oculto*/
+.icono.oculto {
+  display: none;
+}
+
+.revelado-glitch {
+  animation: glitchIn 0.6s ease-in-out;
+}
+
+@keyframes glitchIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) rotate(1deg);
+    filter: hue-rotate(90deg) blur(1px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) rotate(-2deg);
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: none;
+  }
+}
+
+
+
+
+/*esto es del nodo*/
+
+.ventana-nodo {
+  background-color: #0a0a0f;
+  color: #00ffff;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.nodo-contenido h3 {
+  margin-top: 0;
+  color: #66ffff;
+  text-shadow: 0 0 8px #0ff;
+}
+
+.nodo-alerta {
+  font-weight: bold;
+  color: #ff4b4b;
+  text-shadow: 0 0 6px red;
+  margin-bottom: 1rem;
+}
+
+.nodo-pantalla {
+  background-color: #111;
+  border: 2px solid #00ffff55;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.pantalla-glitch img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.2);
+  opacity: 0.85;
+}
+
+.interferencia {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.85rem;
+  color: #ffcccc;
+  background-color: rgba(0,0,0,0.6);
+  padding: 0.3rem 0.6rem;
+  border: 1px solid red;
+  box-shadow: 0 0 4px red;
+  animation: parpadeo 0.9s infinite alternate;
+}
+
+@keyframes parpadeo {
+  from { opacity: 1; }
+  to { opacity: 0.3; }
+}
+
+.nodo-mensaje {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #aaffff;
+}
+
+.btn-rastreo {
+  background-color: transparent;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  padding: 0.4rem 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-rastreo:hover {
+  background-color: #00ffff20;
+  box-shadow: 0 0 8px #00ffff;
+}
+
+.rastreo-texto {
+  margin-top: 1rem;
+  color: #99ffff;
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+}
+
+
+
+
+/*no se usa
+.video-nodo {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.2);
+  opacity: 0.85;
+  border: none;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+.pantalla-glitch-simple {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 255, 255, 0.1),
+    rgba(0, 255, 255, 0.1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  margin: 1rem 0;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  text-align: center;
+  font-size: 1rem;
+  color: #aaffff;
+}
+
+
+
+
+
+
+/*de heraldico parte 2*/
+.ventana-heraldico .ventana-contenido {
+  background-color: #0b1a22;
+  border: 2px solid #00ffaa55;
+  box-shadow: 0 0 25px #00ffcc33;
+  color: #c6f5ff;
+}
+
+.fragmento-contenedor {
+  padding: 1rem;
+}
+
+.barra-progreso {
+  width: 100%;
+  height: 14px;
+  background: #002833;
+  border: 1px solid #00cccc66;
+  border-radius: 6px;
+  margin-top: 0.8rem;
+  overflow: hidden;
+}
+
+.progreso-interno {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00ffff, #0055aa);
+  transition: width 0.2s ease-in-out;
+}
+
+.btn-decodificar {
+  background: linear-gradient(145deg, #0b1e2d, #142f47);
+  border: 1px solid #00ffee44;
+  color: #00ffee;
+  padding: 10px 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  text-shadow: 0 0 3px #00ffee;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px #00ffee66, 0 0 2px #00ffee;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 15px;
+}
+
+.btn-decodificar:hover {
+  background: #0f2e40;
+  box-shadow: 0 0 12px #00ffeeaa, 0 0 4px #00ffeeaa, inset 0 0 8px #00ffee22;
+  transform: scale(1.03);
+}
+
+.btn-decodificar:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 6px #00ffeeaa, inset 0 0 8px #00ffee66;
+}
+
+
+.fragmento-texto {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+  border-left: 3px solid #00ffffaa;
+  white-space: pre-line;
+  margin-top: 1rem;
+  color: #ccf8ff;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+
+
+
+
+/*heraldico*/
+
+
+.mensaje-vivo {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #00ffcc;
+  font-family: "Courier New", monospace;
+  padding: 10px;
+  margin-top: 10px;
+  border-left: 3px solid #00ffaa;
+  white-space: pre-wrap;
+  max-height: 200px;
+  overflow-y: auto;
+  animation: parpadeoVivo 1.5s infinite alternate;
+}
+
+@keyframes parpadeoVivo {
+  0% { opacity: 1; }
+  100% { opacity: 0.95; }
+}
+
+
+
+
+/*de flamea*/
+
+/* Contenedor de la red espiritual */
+.red-espiritual {
+  background: rgba(255, 60, 60, 0.05);
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #ff4444;
+  font-family: 'Courier New', monospace;
+  max-height: 300px;
+  overflow-y: auto;
+  animation: red-inicio 1s ease;
+}
+
+/* Línea por cada usuario */
+.usuario-linea {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted #ff4444;
+  padding: 4px 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.usuario-linea:hover {
+  background: rgba(255, 0, 0, 0.08);
+}
+
+/* Estilo del nombre del usuario */
+.usuario-nombre {
+  color: #ffaaaa;
+  font-weight: bold;
+}
+
+/* Estilo del ID */
+.usuario-id {
+  color: #888;
+  font-style: italic;
+}
+
+/* Estado dinámico */
+.usuario-estado {
+  font-weight: bold;
+}
+
+/* Colores para cada estado */
+.estado-conectado {
+  color: #00ff88;
+  text-shadow: 0 0 5px #00ff88;
+}
+
+.estado-desconectado {
+  color: #ff6666;
+}
+
+.estado-interferencia {
+  color: #ffa500;
+  animation: interferencia 0.6s infinite alternate;
+}
+
+.estado-canalizando {
+  color: #ffdd33;
+  font-style: italic;
+}
+
+/* Animaciones */
+@keyframes interferencia {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+@keyframes red-inicio {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+
+
+
+/*de flamea*/
+
+/*.perfil-flotante {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 750px;
+  background: #1c0b0b;
+  color: #ffe;
+  border: 2px solid #ff4444;
+  padding: 1rem;
+  z-index: 9999;
+  box-shadow: 0 0 15px #ff4444;
+  font-family: 'Share Tech Mono', monospace;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.btn-cerrar-perfil {
+  float: right;
+  background: transparent;
+  border: none;
+  color: #ff9999;
+  font-size: 1.3rem;
+  cursor: pointer;
+}*/
+
+
+/*de eco_mem*/
+
+.ventana-eco {
+  background: radial-gradient(circle, #200022, #000);
+  border: 2px solid #8a2be2;
+  box-shadow: 0 0 15px #cc66ff;
+  color: #e0c9ff;
+  font-family: 'Share Tech Mono', monospace;
+  padding: 1rem;
+  max-height: 500px; /* <- ajusta la altura máxima */
+  overflow-y: auto;   /* <- agrega scroll si se desborda */
+  box-sizing: border-box;
+}
+
+
+.eco-titulo h3 {
+  color: #ffbbff;
+  margin-bottom: 0.2rem;
+}
+
+.eco-memoria, .eco-comparador, .eco-terminal {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid #cc66ff;
+}
+
+.eco-lista {
+  list-style: none;
+  padding-left: 0;
+}
+
+.eco-item {
+  margin: 0.3rem 0;
+  cursor: pointer;
+  color: #ffccff;
+  transition: 0.3s;
+}
+.eco-item:hover {
+  text-shadow: 0 0 5px violet;
+  transform: scale(1.03);
+}
+
+.eco-pre {
+  white-space: pre-wrap;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.5rem;
+  border: 1px dashed #8a2be2;
+  min-height: 80px;
+  color: #ffe0ff;
+}
+
+.eco-terminal input {
+  width: 100%;
+  padding: 0.4rem;
+  background: #1a001f;
+  border: 1px solid #cc66ff;
+  color: #fff;
+  font-family: inherit;
+  margin-bottom: 0.4rem;
+}
+
+.eco-respuesta {
+  color: #ddaaff;
+  font-style: italic;
+}
+
+
+
+/*delta*/
+
+.ventana-delta {
+  background: linear-gradient(145deg, #1a001a, #220033);
+  border: 2px solid #8800ff;
+  color: #ddccff;
+  font-family: 'Share Tech Mono', monospace;
+  padding: 1rem;
+  max-height: 500px; /* puedes ajustar */
+  overflow: hidden;
+  
+}
+
+
+.contenedor-conciencias {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  height: 85%;
+  overflow-y: auto;
+}
+
+.lista-conciencias {
+  width: 30%;
+  border-right: 1px solid #aa00ff;
+}
+
+.lista-conciencias ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-conciencias li {
+  cursor: pointer;
+  padding: 6px;
+  border-bottom: 1px dotted #8800ff;
+  transition: background 0.3s;
+}
+
+.lista-conciencias li:hover {
+  background: rgba(136, 0, 255, 0.1);
+}
+
+.panel-chat {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-log {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #8800ff;
+  padding: 1rem;
+  height: 200px;
+  overflow-y: auto;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+#entrada-chat {
+  padding: 0.5rem;
+  background: #200033;
+  color: #ddccff;
+  border: 1px solid #8800ff;
+}
+
+.pensamientos-flotantes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  font-size: 0.75rem;
+  animation: flotante-loop 20s infinite linear;
+  opacity: 0.05;
+}
+
+@keyframes flotante-loop {
+  0% { transform: translateY(100%); opacity: 0.1; }
+  100% { transform: translateY(-100%); opacity: 0.2; }
+}
+
+
+/*de eclipse*/
+
+.ventana-eclipse {
+  background: #220000;
+  color: #ffcccc;
+  font-family: 'Share Tech Mono', monospace;
+  padding: 1rem;
+  border: 2px solid #ff3366;
+  box-shadow: 0 0 20px #ff0033;
+}
+
+.eclipse-contactos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.eclipse-contactos li {
+  padding: 0.5rem;
+  border-bottom: 1px dotted #ff6666;
+  cursor: pointer;
+  color: #ffaa88;
+  transition: background 0.2s;
+}
+
+.eclipse-contactos li:hover {
+  background: rgba(255, 100, 100, 0.1);
+}
+
+.eclipse-chat {
+  margin-top: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #ff5555;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  color: #ffaaaa;
+  font-weight: bold;
+}
+
+.chat-mensajes {
+  max-height: 200px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border: 1px solid #444;
+  font-size: 0.9rem;
+}
+
+.mensaje {
+  margin: 0.3rem 0;
+}
+
+.mensaje.usuario {
+  color: #88ff88;
+}
+
+.mensaje.sistema {
+  color: #ff9999;
+}
+
+.chat-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 0.4rem;
+  background: #220000;
+  border: 1px solid #ff4444;
+  color: #fff;
+}
+
+.chat-input button {
+  background: #ff4444;
+  border: none;
+  color: white;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+
+.btn-cerrar-chat {
+  background: transparent;
+  color: #ff9999;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.oculto {
+  display: none;
+}
+
+
+
+
+.eclipse-contenedor {
+  display: flex;
+  gap: 1rem;
+}
+
+.eclipse-contactos {
+  width: 45%;
+  border-right: 1px solid #ff4444;
+  padding-right: 1rem;
+}
+
+.eclipse-chat {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-mensajes {
+  flex-grow: 1;
+  max-height: 260px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #444;
+}
+
+.chat-input {
+  display: flex;
+}
+
+.chat-input input {
+  width: 100%;
+  padding: 0.5rem;
+  background: #220000;
+  border: 1px solid #ff4444;
+  color: #fff;
+  font-family: monospace;
+}
+

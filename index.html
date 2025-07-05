@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nébula.exe</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <div class="pantalla">
+    <header>
+      <h1>Tal y como escribí</h1>
+      <h2> K... </h2>
+    </header>
+
+    <main class="icon-grid">
+      <div class="icono" onclick="abrirArchivo('heraldico')">
+  <img src="assets\icons\folder.png" alt="Heráldico" />
+  <p>Σ-Fragmento.sys</p>
+</div>
+
+<div class="icono" onclick="abrirArchivo('flamea')">
+  <img src="https://cdn-icons-png.flaticon.com/512/2298/2298515.png" alt="Flamea" />
+  <p>Iniciación_Flamea.neb</p>
+</div>
+
+<div class="icono" onclick="abrirArchivo('eco_mem')">
+  <img src="https://cdn-icons-png.flaticon.com/512/5805/5805414.png" alt="eco_mem" />
+  <p>eco_mem-13.mnd</p>
+</div>
+
+      <div class="icono glitch-icon" onclick="abrirArchivo('notas')">
+        <img src="https://cdn-icons-png.flaticon.com/512/727/727269.png" alt="Notas" />
+        <p>Notas del administrador.wav</p>
+      </div>
+
+      <div class="icono" onclick="abrirArchivo('delta')">
+        <img src="https://cdn-icons-png.flaticon.com/512/2251/2251417.png" alt="Delta" />
+        <p>δ-me13.exe</p>
+      </div>
+
+      <div class="icono" onclick="abrirArchivo('eclipse')">
+  <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png" alt="Eclipse">
+  <p>EclipseFinal.dll</p>
+</div>
+
+<div class="icono" onclick="abrirArchivo('codice')">
+  <img src="https://cdn-icons-png.flaticon.com/512/2875/2875333.png" alt="Códice">
+  <p>CódiceLatente.txt</p>
+</div>
+
+<div class="icono" onclick="abrirArchivo('reactor')">
+  <img src="https://cdn-icons-png.flaticon.com/512/843/843232.png" alt="Reactor">
+  <p>Reactor-Fz0.exe</p>
+</div>
+
+<div class="icono" onclick="abrirArchivo('metadatos')">
+  <img src="https://cdn-icons-png.flaticon.com/512/2889/2889676.png" alt="Metadatos">
+  <p>metadatos_null.bkp</p>
+</div>
+
+<div class="icono" onclick="abrirArchivo('herencia')">
+  <img src="https://cdn-icons-png.flaticon.com/512/1087/1087924.png" alt="Herencia">
+  <p>herencia_oscura.sys</p>
+</div>
+
+<div class="icono oculto" id="icono-nodo" onclick="abrirArchivo('nodo')">
+  <img src="https://cdn-icons-png.flaticon.com/512/1583/1583544.png" alt="Nodo" />
+  <p>Σ-Nodo_Nebular.drv</p>
+</div>
+
+
+
+
+    </main>
+
+
+
+    <footer>
+  <span>Menú principal <span id="hora-sistema">--:--</span></span>
+</footer>
+
+
+    <div id="ventana" class="ventana">
+      <div class="ventana-contenido">
+        <button onclick="cerrarVentana()">✖</button>
+        <div id="contenido-archivo"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>☣ Núcleo Central ☣</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fuente futurista -->
+  <!--background: url('') no-repeat center center fixed;-->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #000;
+
+      background-size: cover;
+      color: #00ffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      backdrop-filter: blur(3px);
+      overflow: hidden;
+    }
+
+    .contenedor-nucleo {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      border: 2px solid #00ffff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00f0ff80;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    p.descripcion {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #cceeff;
+    }
+
+    .boton-volver {
+      background: none;
+      border: 2px solid #00ffff;
+      color: #00ffff;
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .boton-volver:hover {
+      background-color: #00ffff;
+      color: #000;
+      box-shadow: 0 0 10px #00ffff;
+    }
+
+    .alerta {
+      color: #ff4444;
+      font-weight: bold;
+      margin-top: 1rem;
+      text-shadow: 0 0 8px red;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor-nucleo">
+    <h1>☣ Núcleo Central ☣</h1>
+    <p class="descripcion">Has accedido a una sección altamente clasificada.<br>Los sistemas están en monitoreo constante.<br>Por Kevin-93.</p>
+
+    <p class="alerta">⚠ Toda interacción será registrada ⚠</p>
+
+    <button class="boton-volver" onclick="window.location.href='index.html'">⬅ Volver al escritorio</button>
+  </div>
+</body>
+</html>
